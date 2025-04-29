@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Codexy</title>
+    <meta name="description" content="Contáctanos para impulsar tu presencia digital. Estamos aquí para ayudarte con tus proyectos.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/gradients.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+     <!-- Header Sticky -->
+     <header class="header">
+        <nav class="nav container">
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/Free__2_-removebg-preview.png" alt="Codexy" class="nav-logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#servicios" class="active">Servicios <i class="fas fa-plus"></i></a>
+                        <div class="dropdown-content">
+                            <a href="desarrollo-web.html">Desarrollo Web</a>
+                            <a href="diseno-ux-ui.html">Diseño UX/UI</a>
+                            <a href="marketing-digital.html" class="active">Marketing Digital</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#proceso">Proceso</a></li>
+                    <li><a href="index.html#precios">Precios</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="nav-buttons">
+                    <a href="contacto.html" class="btn btn-ghost">Contacto</a>
+                    <a href="https://wa.me/543434732389?text=Hola%20👋%20Estoy%20interesado/a%20en%20conocer%20más%20sobre%20los%20servicios%20de%20desarrollo%20web%20,%20Diseño%20UX/UI%20y%20Marketing%20Digital%20.%20¿Podrías%20brindarme%20más%20información?" 
+                    target="_blank" class="btn btn-primary">Agendar Reunión</a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contacto Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <span class="badge"><i class="fas fa-envelope"></i> Contacto</span>
+                <h1>¿Listo para impulsar tu proyecto?</h1>
+                <p>Cuéntanos sobre tu idea y te ayudaremos a hacerla realidad</p>
+            </div>
+        </div>
+        <div class="gradient-sphere gradient-1"></div>
+        <div class="gradient-sphere gradient-2"></div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Información de Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>Estamos aquí para ayudarte. Contáctanos por cualquiera de estos medios:</p>
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/543434732389?text=Hola%20👋%20Estoy%20interesado/a%20en%20conocer%20más%20sobre%20los%20servicios%20de%20desarrollo%20web%20,%20Diseño%20UX/UI%20y%20Marketing%20Digital%20.%20¿Podrías%20brindarme%20más%20información?" class="contact-method">
+                            <span class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                            <div class="method-details">
+                                <h3>Teléfono</h3>
+                                
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:contacto@codexy.com" class="contact-method">
+                            <span class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <div class="method-details">
+                                <h3>Email</h3>
+                                <p>codexyoficial@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://maps.google.com" target="_blank" class="contact-method">
+                            <span class="contact-icon">
+                                <i class="fas fa-map-marker"></i>
+                            </span>
+                            <div class="method-details">
+                                <h3>Ubicación</h3>
+                                <p>Argentina</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xpwdqzng" method="POST">
+                        <div class="form-group">
+                            <label for="name"></label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject"></label>
+                            <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            Enviar Mensaje <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Slider -->
+    <section class="payment-methods-slider">
+        <h2 class="section-title">Métodos de Pago Aceptados</h2>
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Tarjetas y Bancos -->
+                <div class="slide">
+                    <img src="img/payments/mastercard.png" alt="Mastercard">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/visa.png" alt="Visa">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/amex.png" alt="American Express">
+                </div>
+                <!-- Billeteras Digitales -->
+                <div class="slide">
+                    <img src="img/payments/mercadopago.png" alt="Mercado Pago">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/paypal.png" alt="PayPal">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/uala.png" alt="Ualá">
+                </div>
+                <!-- Bancos Digitales -->
+                <div class="slide">
+                    <img src="img/payments/brubank.png" alt="Brubank">
+                </div>
+                <!-- Criptomonedas -->
+                <div class="slide">
+                    <img src="img/payments/binance.png" alt="Binance">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/bitcoin.png" alt="Bitcoin">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/ethereum.png" alt="Ethereum">
+                </div>
+                <!-- Duplicamos las imágenes para el efecto infinito -->
+                <div class="slide">
+                    <img src="img/payments/mastercard.png" alt="Mastercard">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/visa.png" alt="Visa">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/amex.png" alt="American Express">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/mercadopago.png" alt="Mercado Pago">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/paypal.png" alt="PayPal">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/uala.png" alt="Ualá">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/brubank.png" alt="Brubank">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/binance.png" alt="Binance">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/bitcoin.png" alt="Bitcoin">
+                </div>
+                <div class="slide">
+                    <img src="img/payments/ethereum.png" alt="Ethereum">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/Free__2_-removebg-preview.png" alt="Codexy">
+                </div>
+                <p>&copy; 2025 Codexy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

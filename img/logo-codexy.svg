@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fondo del circuito -->
+    <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6e42e5;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#42e5e5;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Círculo central con circuitos -->
+    <g transform="translate(25, 25)">
+        <circle cx="0" cy="0" r="20" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+        
+        <!-- Líneas de circuito -->
+        <path d="M-15,0 L-25,0 M15,0 L25,0" stroke="url(#logoGradient)" stroke-width="2"/>
+        <path d="M0,-15 L0,-25 M0,15 L0,25" stroke="url(#logoGradient)" stroke-width="2"/>
+        
+        <!-- Puntos de conexión -->
+        <circle cx="-25" cy="0" r="2" fill="url(#logoGradient)"/>
+        <circle cx="25" cy="0" r="2" fill="url(#logoGradient)"/>
+        <circle cx="0" cy="-25" r="2" fill="url(#logoGradient)"/>
+        <circle cx="0" cy="25" r="2" fill="url(#logoGradient)"/>
+        
+        <!-- Detalles internos -->
+        <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="url(#logoGradient)" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Texto "CODEXY" -->
+    <text x="60" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="url(#logoGradient)">CODEXY</text>
+    
+    <!-- Líneas decorativas alrededor del texto -->
+    <path d="M60,38 L180,38" stroke="url(#logoGradient)" stroke-width="0.5" opacity="0.5"/>
+    <path d="M60,40 L180,40" stroke="url(#logoGradient)" stroke-width="0.5" opacity="0.3"/>
+</svg>

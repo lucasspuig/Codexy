@@ -1,0 +1,37 @@
+.placeholder-mockup {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: 500;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.placeholder-mockup.desktop {
+    min-height: 300px;
+}
+
+.placeholder-mockup.mobile {
+    min-height: 150px;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}

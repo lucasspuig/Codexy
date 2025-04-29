@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <style>
+    .dashboard { fill: #f8fafc; stroke: #e2e8f0; }
+    .sidebar { fill: #1e293b; }
+    .chart { fill: #6366f1; opacity: 0.8; }
+    .card { fill: #ffffff; stroke: #e2e8f0; }
+    .text { fill: #64748b; font-family: sans-serif; }
+  </style>
+  
+  <!-- Dashboard Background -->
+  <rect class="dashboard" x="0" y="0" width="800" height="600" rx="12"/>
+  
+  <!-- Sidebar -->
+  <rect class="sidebar" x="0" y="0" width="200" height="600"/>
+  
+  <!-- Main Content -->
+  <g transform="translate(220,20)">
+    <!-- Stats Cards -->
+    <g transform="translate(0,0)">
+      <rect class="card" x="0" y="0" width="160" height="100" rx="8"/>
+      <rect class="chart" x="20" y="60" width="120" height="20" rx="4"/>
+      <text class="text" x="20" y="30" font-size="14">Visitas</text>
+    </g>
+    
+    <g transform="translate(180,0)">
+      <rect class="card" x="0" y="0" width="160" height="100" rx="8"/>
+      <rect class="chart" x="20" y="60" width="80" height="20" rx="4"/>
+      <text class="text" x="20" y="30" font-size="14">Ventas</text>
+    </g>
+    
+    <g transform="translate(360,0)">
+      <rect class="card" x="0" y="0" width="160" height="100" rx="8"/>
+      <rect class="chart" x="20" y="60" width="100" height="20" rx="4"/>
+      <text class="text" x="20" y="30" font-size="14">Usuarios</text>
+    </g>
+    
+    <!-- Main Chart -->
+    <rect class="card" x="0" y="120" width="520" height="300" rx="8"/>
+    <polyline class="chart" points="40,350 120,280 200,300 280,200 360,250 440,180 520,220" 
+              fill="none" stroke="#6366f1" stroke-width="3"/>
+              
+    <!-- Bottom Cards -->
+    <g transform="translate(0,440)">
+      <rect class="card" x="0" y="0" width="250" height="120" rx="8"/>
+      <rect class="chart" x="20" y="80" width="210" height="20" rx="4"/>
+    </g>
+    
+    <g transform="translate(270,440)">
+      <rect class="card" x="0" y="0" width="250" height="120" rx="8"/>
+      <rect class="chart" x="20" y="80" width="210" height="20" rx="4"/>
+    </g>
+  </g>
+</svg>

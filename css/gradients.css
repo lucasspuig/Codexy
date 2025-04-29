@@ -1,0 +1,144 @@
+/* Gradientes modernos */
+:root {
+    --gradient-1: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+    --gradient-2: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    --gradient-3: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+
+.gradient-bg {
+    background: var(--gradient-1);
+}
+
+:root {
+    --gradient-primary: linear-gradient(45deg, #6366f1, #10b981);
+}
+
+.gradient-text {
+    background-image: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-detail {
+    background: var(--gradient-glass);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-detail:hover {
+    transform: translateY(-5px);
+}
+
+.mockup-section {
+    position: relative;
+    padding: 6rem 0;
+    background: var(--gradient-2);
+    overflow: hidden;
+}
+
+.mockup-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mockup-text {
+    color: white;
+    max-width: 500px;
+}
+
+.mockup-laptop {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    transform: perspective(1000px) rotateX(5deg);
+    transition: transform 0.3s ease;
+}
+
+.mockup-laptop:hover {
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.mockup-screen {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.mockup-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contact-card {
+    background: var(--gradient-glass);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1rem 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-tab {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--gradient-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.service-tab.active {
+    background: var(--gradient-1);
+    color: white;
+}
+
+.service-content {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.service-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
