@@ -3,6 +3,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     const minScrollDistance = 50; // Mínima distancia de scroll para activar
 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            
+            if (targetId === '#inicio') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
         

@@ -833,6 +833,22 @@ overflow: hidden;
         position: relative;
         overflow: hidden;
     } 
+    .gradient-1 {
+        background: var(--primary-color);
+        width: 124vw;
+        height: 69vw;
+        top: 0%;
+        right: -10%;
+        opacity: 0.6;
+    }
+    .gradient-2 {
+        background: var(--secondary-color);
+        width: 210vw;
+        height: 35vw;
+        bottom: -9%;
+        left: -49%;
+        opacity: 0.6;
+    }
 
 }
 
