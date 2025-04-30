@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', function(e) {
         e.stopPropagation();
         nav.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
         if (nav.classList.contains('active')) {
             navLinks.style.display = 'flex';
         } else {
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     links.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
+            document.body.classList.remove('menu-open');
             navLinks.style.display = 'none';
         });
     });
@@ -60,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target)) {
             nav.classList.remove('active');
+            document.body.classList.remove('menu-open');
             navLinks.style.display = 'none';
             dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
