@@ -33,8 +33,25 @@
 }
 
 .badge-wrapper {
-    
+    text-align: center;
     margin-bottom: 3rem;
+}
+
+.badge-wrapper .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-gradient);
+    color: var(--text-white);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.badge-wrapper .badge i {
+    font-size: 1rem;
 }
 
 .questions__paragraph {

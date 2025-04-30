@@ -921,8 +921,20 @@
 .footer-brand {
     width: 100%;
     align-items: center;
-    /* text-align: left; */
     text-align: center;
+    
+
+}
+.footer-logo {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+.footer-logo.visible {
+opacity: 1;
+transform: translateY(0);
 }
 @media (min-width: 900px) {
     .footer-container {

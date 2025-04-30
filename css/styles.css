@@ -931,14 +931,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    padding: 2.5rem;
-    border-radius: 20px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
     text-align: center;
-    transition: var(--transition);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow);
+    transition: all 0.8s ease; /* cambiamos a all para incluir animaciones */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* animación inicial */
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(5px);
+}
+
+.service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover {
