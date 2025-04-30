@@ -93,12 +93,30 @@
         margin-top: 10px;
         border-radius: 8px;
         opacity: 1;
+        visibility: visible;
         transform: none;
-        pointer-events: all;
+        box-shadow: none;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        background: var(--glass-bg);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--glass-border);
     }
 
-    .dropdown.active .dropdown-content {
-        display: block;
+    .dropdown-content a {
+        padding: 0.75rem 1rem;
+        margin: 0.25rem 0;
+        border-radius: var(--radius-sm);
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background: var(--glass-bg);
+        color: var(--primary-color);
+    }
+
+    .dropdown.active i {
+        transform: rotate(45deg);
     }
 
     .dropdown > a {
@@ -112,9 +130,6 @@
         transition: transform 0.3s;
     }
 
-    .dropdown.active i {
-        transform: rotate(45deg);
-    }
 
     .menu-toggle {
         display: block;
@@ -262,7 +277,7 @@
 /* Consulta */
 @media (max-width: 768px) {
     .contact-hero {
-        padding: 16rem 0 13rem;
+        padding: 18rem 0 16rem;
     }
 
     .contact-hero h1 {
@@ -282,7 +297,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 2rem;
+        padding: 0rem;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -418,13 +433,14 @@
 }
 .nav.active .nav-logo {
     position: fixed;
-    top: 0;
-    left: 50%;
+    top: none;
+    left: 67%;
     transform: translateX(-50%);
     z-index: 1001;
-    height: 320px;
-    width: 246px;
-    margin-top: 2rem;
+    height: 377px;
+    width: 328px;
+    margin-top: -5rem;
+    /* object-fit: contain; */
 }
 .nav-logo {
     height: 320px;

@@ -612,8 +612,8 @@
         justify-content: center;
     }
 
-    .social-links {
-        justify-content: center;
+    .contact-method {
+        justify-content: flex-start;
     }
 
     .form-grid {
@@ -631,6 +631,12 @@
     transition: transform 0.3s;
     padding: 0px 16px 14px 0px;
 }
+.payment-methods-slider .section-title {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-align: center;
+}
 }
 @media (min-width: 375px) and (max-width: 425px) {
 .menu-toggle i {
@@ -638,5 +644,11 @@
     color: white;
     transition: transform 0.3s;
     padding: 0px 16px 14px 0px;
+}
+.payment-methods-slider .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-align: center;
 }
 }
