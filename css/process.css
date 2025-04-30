@@ -123,8 +123,8 @@
 .process-slider {
     position: relative;
     width: 100%;
-    height: 650px;
-    margin: 2rem auto;
+    
+    margin: 18rem auto;
     perspective: 2500px;
     overflow: visible;
 }
@@ -631,8 +631,8 @@
         /* margin-top: 142px; */
         /* position: relative; */
         /* width: 100%; */
-         height: 200px; 
-        /* margin: 8rem auto; */
+         
+         margin: 8rem auto; 
         /* perspective: 2500px; */
         /* overflow: visible; */
         margin-left: 162px;
