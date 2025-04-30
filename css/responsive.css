@@ -843,9 +843,9 @@ overflow: hidden;
     }
     .gradient-2 {
         background: var(--secondary-color);
-        width: 210vw;
+        width: 310vw;
         height: 35vw;
-        bottom: -9%;
+        bottom: -3%;
         left: -49%;
         opacity: 0.6;
     }

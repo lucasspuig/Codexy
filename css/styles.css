@@ -606,12 +606,11 @@ h1, h2, h3, h4, h5, h6 {
     right: -10%;
     opacity: 0.6;
 }
-
 .gradient-2 {
     background: var(--secondary-color);
-    width: 35vw;
-    height: 35vw;
-    bottom: -15%;
+    width: 33vw;
+    height: 28vw;
+    bottom: -35%;
     left: -5%;
     opacity: 0.6;
 }

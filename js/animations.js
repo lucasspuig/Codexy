@@ -1,3 +1,11 @@
+// Prevenir scroll automático
+if (window.location.hash) {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 1);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         root: null,
@@ -29,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Prevenir el scroll automático al hero
-    if (window.location.hash === '#inicio') {
-        window.scrollTo(0, 0);
+    // Limpiar el hash de la URL sin causar scroll
+    if (window.location.hash) {
         history.replaceState(null, '', window.location.pathname);
+        window.scrollTo(0, 0);
     }
 });

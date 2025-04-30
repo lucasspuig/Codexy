@@ -3,20 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     const minScrollDistance = 50; // Mínima distancia de scroll para activar
 
+    // Prevenir scroll automático inicial
+    window.history.scrollRestoration = 'manual';
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             
-            if (targetId === '#inicio') {
+            if (targetId === '#inicio' || targetId === '#') {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
+                // Limpiar el hash sin causar scroll
+                history.pushState('', document.title, window.location.pathname);
             } else {
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
