@@ -26,12 +26,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle dropdown menus in mobile view
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', function(e) {
+        const dropdownLink = dropdown.querySelector('a');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        const dropdownIcon = dropdown.querySelector('.fa-plus');
+        let isOpen = false;
+
+        dropdownLink.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
-                this.querySelector('.dropdown-content').classList.toggle('show');
-                this.querySelector('.fa-plus').classList.toggle('rotate');
+                e.stopPropagation();
+                
+                isOpen = !isOpen;
+                if (isOpen) {
+                    dropdownContent.style.display = 'block';
+                    dropdownIcon.classList.add('rotate');
+                } else {
+                    dropdownContent.style.display = 'none';
+                    dropdownIcon.classList.remove('rotate');
+                }
             }
         });
+    });
+
+    // Cerrar dropdowns cuando se hace click fuera
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            dropdowns.forEach(dropdown => {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                const dropdownIcon = dropdown.querySelector('.fa-plus');
+                if (!dropdown.contains(e.target)) {
+                    dropdownContent.style.display = 'none';
+                    dropdownIcon.classList.remove('rotate');
+                    dropdown.isOpen = false;
+                }
+            });
+        }
     });
 });

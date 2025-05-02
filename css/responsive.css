@@ -37,6 +37,8 @@
         text-align: center;
         z-index: 1000;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .nav.active .nav-links {
@@ -159,14 +161,17 @@
     .nav.active .nav-links {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 80px;
         left: 0;
         right: 0;
         background: var(--bg-primary);
         padding: var(--spacing-md);
         border-bottom: 1px solid var(--glass-border);
         box-shadow: var(--shadow-lg);
+        height: auto;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .nav.active .nav-buttons {
@@ -431,6 +436,17 @@
         font-size: 0.9rem;
         padding: 0.8rem 1.5rem;
     }
+    .nav.active .nav-logo {
+        position: fixed;
+        top: none;
+        left: 23%;
+        transform: translateX(-50%);
+        z-index: 1001;
+        height: 377px;
+        width: 328px;
+        margin-top: -5rem;
+        /* object-fit: contain; */
+    }
 }
 
 
@@ -611,13 +627,24 @@ overflow: hidden;
     color: var(--primary-color);
     margin-bottom: var(--spacing-xs);
 }
+.nav.active .nav-logo {
+    position: fixed;
+    top: none;
+    left: 28%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    height: 377px;
+    width: 328px;
+    margin-top: -5rem;
+    /* object-fit: contain; */
+}
 }
 
 /* 375px - 425px */
 @media (min-width: 375px) and (max-width: 425px) {
     /* nav */
     .nav.active .nav-links {
-        padding: 17rem 1rem 2rem;
+        padding: 17rem 1rem 45rem;
         display: flex
 ;
         flex-direction: column;
@@ -635,7 +662,7 @@ overflow: hidden;
     .nav.active .nav-logo {
         position: fixed;
         top: none;
-        left: 67%;
+        left: 26%;
         transform: translateX(-50%);
         z-index: 1001;
         height: 377px;

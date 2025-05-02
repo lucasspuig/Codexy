@@ -33,7 +33,7 @@
 }
 
 .badge-wrapper {
-    text-align: center;
+    
     margin-bottom: 3rem;
 }
 
@@ -82,6 +82,27 @@
     margin: 4px;
     pointer-events: none;
 }
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .questions__padding {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .questions__padding.animate {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
 
 .questions__padding:hover {
     transform: translateY(-2px);
@@ -167,5 +188,16 @@
         font-size: 14px;
         padding: 25px 0;
     }
-
+    .badge-wrapper .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--primary-gradient);
+        color: var(--text-white);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
 }

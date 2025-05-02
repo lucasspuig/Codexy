@@ -100,21 +100,56 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-  //fotter brand//
-  document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".footer-logo");
+//animaciones secciones de preguntas//
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".questions__padding");
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // Solo animar una vez
+          // Aplicar con delay escalonado
+          setTimeout(() => {
+            entry.target.classList.add("animate");
+          }, index * 200); // 200ms de diferencia por cada bloque
+          observer.unobserve(entry.target); // solo una vez
         }
       });
-    }, { threshold: 0.7 });
-
-    items.forEach((item) => {
-      observer.observe(item);
+    }, {
+      threshold: 0.5 // se activa cuando el 30% del elemento está visible
     });
+
+    elements.forEach(el => observer.observe(el));
   });
-  
+
+//animaciones footer//
+
+document.addEventListener("DOMContentLoaded", () => {
+  const footer = document.querySelector(".footer");
+  const footerItems = [
+    document.querySelector(".footer-logo"),
+    ...document.querySelectorAll(".footer-section"),
+    document.querySelector(".newsletter-form")
+  ];
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        footer.classList.add("animate");
+
+        footerItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add("animate");
+          }, index * 200); // delay escalonado
+        });
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(footer);
+});
+
