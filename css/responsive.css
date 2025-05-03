@@ -742,7 +742,7 @@ overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 6rem 1rem 5rem 1rem;
 }
 
 .process-slider {
