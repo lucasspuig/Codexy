@@ -276,7 +276,10 @@
 }
 
 .description-image img {
-    max-width: 100%;
+    /* width: 110%; */
+    max-width: 119%;
+    margin-left: -7%;
+    /* margin-right: -15%; */
     height: auto;
     border-radius: 12px;
     animation: float 3s ease-in-out infinite;
