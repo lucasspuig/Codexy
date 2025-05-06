@@ -153,3 +153,19 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(footer);
 });
 
+//animaciones de por que elegirnos//
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".feature-card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        entry.target.classList.add("animate-in");
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  cards.forEach(card => observer.observe(card));
+});
